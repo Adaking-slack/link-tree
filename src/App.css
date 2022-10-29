@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.share{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 5em;
+    padding-top: 4em;
+}
+
+.dot{
+    display: none;
+}
+
+
+.profile-details{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top:5em;
+    padding-bottom: 5em;
+}
+
+.profile-details img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+#twitter{
+    display: flex;
+    flex-direction: row;
+    width:170px;
+    font-size: 20px;
+    gap: 20px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    justify-content: space-between;
+}
+#slack{
+    display: none;
+}
+
+#twitter img{
+    width: 30px;
+    height: 30px;
+    background-color: #EAECF0;
+}
+.links{
+display: flex;
+flex-direction: column;
+align-items: center;
+
+}
+
+a{
+    padding: 1em;
+    margin: 1em;
+    display:  block;
+    text-align: center;
+    text-decoration: none;
+    width: 70%;
+    border: 1px solid #EAECF0;
+    padding: 2em;
+
+    border-radius: 8px;
+        background-color: #EAECF0;;
+    color: black;
+}
+
+
+ .socials{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    padding: 2em;
+
+    
+} 
+
+.socials img{
+    width: 30px;
+    height: 30px;
+}
+
+.pyth{
+    position: relative;
+}
+.book-design{
+    position: relative;
+}
+
+.book-pyth{
+    position: relative;
+}
+
+.code-check{
+    position: relative;
+}
+.hover{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 40px;
+    background-color: #EAECF0;;
+    font-size: 9px;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    padding-top: 3em;
+    background: #ffff;
+   
+}
+
+.ig4g{
+    height: 46px;
+    padding-right: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+    .footer{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding-left: 3em;
+        margin-bottom: 1em;
+    }
+
+    .footer img{
+        width: 60px;
+    }
+
+    .share-icon{
+        display: none;
+    }
+
+    .dot{
+        display: flex;
+    }
+  }
