@@ -1,0 +1,174 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.contactForm {
+    font-family: 'Inter';
+    margin: 0 auto;
+    width: 900px;
+    max-width: 100%;
+    padding-top: 5em;
+}
+
+.text h1 {
+    display: flex;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 44px;
+    padding-bottom: 0.5em;
+}
+
+.text p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.text {
+    padding-bottom: 2.5em;
+}
+
+p {
+    font-size: 18px;
+}
+
+.Formbody {
+    display: flex;
+}
+
+.formname {
+    display: flex;
+    gap: 19px;
+    padding-bottom: 2.5em;
+
+}
+
+.formname input {
+    width: 400px;
+    padding: 18px;
+    width: 430px;
+    border-radius: 8px;
+    border: 1px solid #D0D5DD;
+    background: #FFFFFF;
+}
+
+input::placeholder {
+    font-size: 20px;
+}
+
+.input {
+    padding: 18px;
+    width: 920px;
+    border-radius: 8px;
+    border: 1px solid #D0D5DD;
+    background: #FFFFFF;
+}
+
+.text2 {
+    display: flex;
+    flex-direction: column;
+    gap: 47px;
+}
+
+.text2 textarea {
+    width: 95%;
+
+
+}
+
+textarea {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-right: 4em;
+    background: #FFFFFF;
+    border: 1px solid #D0D5DD;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+    height: 200px;
+    gap: 8px
+}
+
+textarea::placeholder {
+    height: 108px;
+    padding: 1em;
+    font-size: 16px;
+    width: 692px;
+    font-weight: 400;
+    
+
+
+}
+
+.text2 textarea {
+
+    display: flex;
+    width: 99%;
+    border-radius: 8px;
+    border: 1px solid #D0D5DD;
+    padding-bottom: 1em;
+
+}
+
+
+
+.last {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.last label {
+    font-size: 14px;
+    font-style: normal;
+}
+
+.checkboxText {
+    padding-left: 1em;
+}
+
+button {
+    width: 100%;
+    padding: 1.5em;
+    background: #1570EF;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 3em;
+}
+
+@media only screen and (max-width: 650px) {
+
+    .contactForm {
+        width: 350px;
+
+
+    }
+
+    .formname {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formname input {
+
+        width: 87%;
+    }
+
+
+
+    .text2 .input {
+        width: 87%;
+    }
+
+    .text2 textarea {
+        width: 100%;
+    }
+
+
+}
