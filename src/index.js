@@ -11,7 +11,7 @@ root.render(
   <HashRouter>
   <Routes>
   <Route path="/" element={<App />} />
-  <Route path="contact" element={<Contact />} />
+  <Route path="/contact" element={<Contact />} />
   <Route path='/' element={< Footer/>} />
  
   </Routes>

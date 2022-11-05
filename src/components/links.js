@@ -47,10 +47,10 @@ export default function Buttonlink() {
                 Design books
             </a>
 
-            <Link to="/contact">
+            <a href="/contact" id="contact" >
             
                   Contact Me
-            </Link>
+            </a>
 
 
             <div className="socials">

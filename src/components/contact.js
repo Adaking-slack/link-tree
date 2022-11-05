@@ -15,6 +15,7 @@ export default function Contact() {
 
     const onSubmit = (data) => {
         alert(JSON.stringify(data));
+        data.target.reset();
     }
 
 
@@ -99,16 +100,14 @@ export default function Contact() {
                     </div>
 
                     <div className={contactCSS.last}>
+                        <input type="checkbox"  className={contactCSS.checkbox} />
+                         <label className={contactCSS.checkboxText} >
 
-                        <input type="checkbox"
-                            className={contactCSS.checkbox}
-                        />
-
-                        <label className={contactCSS.checkboxText}>
                             You agree to providing your data to Emelike  Adaeze who may contact you.
-
+                            <span className={contactCSS.checkmark}></span>
 
                         </label>
+
                     </div>
 
 
