@@ -77,7 +77,7 @@ export default function Contact() {
                           />
 
                             <label className={contactCSS.checkboxText}>
-                            You agree to providing your data to Adaeze who may contact you.                               
+                            You agree to providing your data to Emelike  Adaeze who may contact you.                               
                        
                                 
                                 </label>
