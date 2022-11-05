@@ -12,10 +12,7 @@ root.render(
   <Routes>
   <Route path="/" element={<App />} />
   <Route path="contact" element={<Contact />} />
-  <Route path='/' element={< Footer/>} 
-  
-  
-  />
+  <Route path='/' element={< Footer/>} />
  
   </Routes>
 <Footer />

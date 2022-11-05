@@ -1,9 +1,23 @@
 
 import contactCSS from "./contact.module.css"
 import { useState } from "react"
-import Footer from "./footer"
+import { useForm } from "react-hook-form";
+
+
 export default function Contact() {
     const [textarea, setTextarea] = useState()
+
+
+
+    const { register, handleSubmit, formState: { errors } } = useForm({
+        mode: 'onChange'
+    });
+
+
+    const onSubmit = (data) => {
+        alert(JSON.stringify(data));
+    }
+
 
     return (
         <div className={contactCSS.contactForm}>
@@ -12,7 +26,7 @@ export default function Contact() {
                 <p>Hi there, contact me to ask me about anything you have in mind.</p>
             </div>
             <div className={contactCSS.Formbody}>
-                <form>
+                <form onSubmit={handleSubmit(onSubmit)}>
                     < div className={contactCSS.formname}>
                         <label>
                             <p>First Name</p>
@@ -20,24 +34,35 @@ export default function Contact() {
                             <input
                                 name="first-name"
                                 type="text"
+                                aria-invalid={errors.firstName ? "true" : "false"}
                                 id="first_name"
-                             
+                                {...register("firstName", { required: true, maxLength: 10 })}
+                                className={contactCSS.input}
                                 placeholder="Enter your first name"
-                            />
-                        </label>
 
+                            />
+                            <div className="error">
+                                {errors.firstName && <p className={contactCSS.textError}>Please enter your First Name </p>}
+
+                            </div>
+                        </label>
                         <label>
                             <p>Last Name</p>
 
                             <input name="Last-name"
                                 type="text"
                                 id="last_name"
-                                placeholder="Enter your first name"
+                                placeholder="Enter your Last name"
+                                {...register("lastName", { required: true, maxLength: 10 })}
+                                className={contactCSS.input}
 
-                            
+                                aria-invalid={errors.lastName ? "true" : "false"}
+
 
 
                             />
+
+                            {errors.firstName && <p className={contactCSS.textError}>Please enter your last Name</p>}
 
 
                         </label>
@@ -51,46 +76,57 @@ export default function Contact() {
                                 type="email"
                                 id="email"
                                 placeholder="yourname@email.com"
-
+                                {...register("email",
+                                    {
+                                        required: true,
+                                        pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                                    })}
                                 className={contactCSS.input}
 
 
+                                aria-invalid={errors.email ? "true" : "false"}
+
                             />
                         </label>
-                        
+                        {errors.email && <p className={contactCSS.textError}>Please enter a valid email</p>}
+
                         <label>
 
                             Message
                             <textarea value={textarea}
                                 id="message"
                                 placeholder="Send me a message and i will reply you"
+                                {...register("text", { required: true, maxLength: 10 })}
+                               required ={errors.text ? "true" : "false"}
+                                
                             />
                         </label>
-              
-          
-                </div>
+                        {errors.text && <p className={contactCSS.textError}>Please enter a message</p>}
 
-                <div className={contactCSS.last}>
 
-                          <input type="checkbox"
-                          className={contactCSS.checkbox}
-                          />
+                    </div>
 
-                            <label className={contactCSS.checkboxText}>
-                            You agree to providing your data to Emelike  Adaeze who may contact you.                               
-                       
-                                
-                                </label>
-                          </div>
-                   
-                   
-                   
-                 <button id="btn__submit">Send message</button>
-              
+                    <div className={contactCSS.last}>
+
+                        <input type="checkbox"
+                            className={contactCSS.checkbox}
+                        />
+
+                        <label className={contactCSS.checkboxText}>
+                            You agree to providing your data to Emelike  Adaeze who may contact you.
+
+
+                        </label>
+                    </div>
+
+
+
+                    <button id="btn__submit" type="submit" >Send message</button>
+
                 </form>
             </div>
 
-            
+
         </div>
     )
 }

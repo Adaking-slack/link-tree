@@ -91,6 +91,13 @@ textarea {
     height: 200px;
     gap: 8px
 }
+.textError {
+    font-weight: 200;
+    color: red;
+    display: flex;
+    
+    
+}
 
 textarea::placeholder {
     height: 108px;
@@ -102,7 +109,24 @@ textarea::placeholder {
 
 
 }
+input[aria-invalid='false'] {
+    border: 3px solid green;
+  }
+  input[aria-invalid='true'] {
+    border: 3px solid red;
+  }
+  
+  textarea[required='true'] {
+    border: 3px solid red;
+  } 
 
+
+
+
+
+.error{
+    border: 1px solid red;
+}
 .text2 textarea {
 
     display: flex;
