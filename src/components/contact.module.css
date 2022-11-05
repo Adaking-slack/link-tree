@@ -95,12 +95,9 @@ textarea {
     height: 200px;
     gap: 8px
 }
-.textError {
+.textError  {
     font-weight: 600;
     color: red;
-
-    
-    
 }
 .checkboxText
 textarea::placeholder {

@@ -7,6 +7,8 @@ import { redirect } from "react-router-dom";
 
 export default function Contact() {
     const [textarea, setTextarea] = useState()
+    const [lastName, setLastName] = useState('');
+    const [firstName, setFirstName] = useState('');
 
     const { register, handleSubmit, formState: { errors } } = useForm({
         mode: 'onChange'
@@ -14,8 +16,9 @@ export default function Contact() {
 
 
     const onSubmit = (data) => {
-        alert(JSON.stringify(data));
-        data.target.reset();
+        alert("successfully submitted");
+
+
     }
 
 
@@ -26,7 +29,7 @@ export default function Contact() {
                 <p>Hi there, contact me to ask me about anything you have in mind.</p>
             </div>
             <div className={contactCSS.Formbody}>
-                <form onSubmit={handleSubmit(onSubmit)}>
+            <form onSubmit={handleSubmit(onSubmit)}>
                     < div className={contactCSS.formname}>
                         <label>
                             <p>First Name</p>
@@ -38,6 +41,7 @@ export default function Contact() {
                                 {...register("firstName", { required: true, maxLength: 10 })}
                                 className={contactCSS.input}
                                 placeholder="Enter your first name"
+                       
                             />
                             
                                 {errors.firstName && <p className={contactCSS.textError}>Please enter your First Name </p>}
