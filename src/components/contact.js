@@ -7,17 +7,16 @@ import { redirect } from "react-router-dom";
 
 export default function Contact() {
     const [textarea, setTextarea] = useState()
-    const [lastName, setLastName] = useState('');
-    const [firstName, setFirstName] = useState('');
+   
 
     const { register, handleSubmit, formState: { errors } } = useForm({
         mode: 'onChange'
     });
 
 
-    const onSubmit = (data) => {
+    const onSubmit = (e) => {
         alert("successfully submitted");
-
+        e.reset()
 
     }
 
@@ -41,7 +40,8 @@ export default function Contact() {
                                 {...register("firstName", { required: true, maxLength: 10 })}
                                 className={contactCSS.input}
                                 placeholder="Enter your first name"
-                       
+                                
+                                
                             />
                             
                                 {errors.firstName && <p className={contactCSS.textError}>Please enter your First Name </p>}

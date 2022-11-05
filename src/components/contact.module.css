@@ -96,7 +96,7 @@ textarea {
     gap: 8px
 }
 .textError  {
-    font-weight: 500;
+    font-weight: 600;
     color: red;
 }
 .checkboxText
