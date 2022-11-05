@@ -28,7 +28,7 @@
 }
 
 .text {
-    padding-bottom: 2.5em;
+    padding-bottom: 2.9em;
 }
 
 p {
@@ -94,7 +94,6 @@ textarea {
 .textError {
     font-weight: 200;
     color: red;
-    display: flex;
     
     
 }
@@ -109,16 +108,6 @@ textarea::placeholder {
 
 
 }
-input[aria-invalid='false'] {
-    border: 3px solid rgb(109, 109, 109);
-  }
-  input[aria-invalid='true'] {
-    border: 3px solid red;
-  }
-  
-  textarea[required='false'] {
-    border: 3px solid red;
-  } 
 
 .text2 textarea {
 

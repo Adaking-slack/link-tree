@@ -2,6 +2,7 @@
 import contactCSS from "./contact.module.css"
 import React, { useState } from "react"
 import { useForm } from "react-hook-form";
+import { redirect } from "react-router-dom";
 
 
 export default function Contact() {
@@ -32,7 +33,6 @@ export default function Contact() {
                             <input
                                 name="first-name"
                                 type="text"
-                                aria-invalid={errors.firstName ? "true" : "false"}
                                 id="first_name"
                                 {...register("firstName", { required: true, maxLength: 10 })}
                                 className={contactCSS.input}
@@ -51,9 +51,7 @@ export default function Contact() {
                                 id="last_name"
                                 placeholder="Enter your Last name"
                                 {...register("lastName", { required: true, maxLength: 10 })}
-                                className={contactCSS.input}
 
-                                aria-invalid={errors.lastName ? "true" : "false"}
 
 
 
@@ -79,9 +77,6 @@ export default function Contact() {
                                         pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
                                     })}
                                 className={contactCSS.input}
-
-
-                                aria-invalid={errors.email ? "true" : "false"}
 
                             />
                         </label>
