@@ -110,23 +110,16 @@ textarea::placeholder {
 
 }
 input[aria-invalid='false'] {
-    border: 3px solid green;
+    border: 3px solid rgb(109, 109, 109);
   }
   input[aria-invalid='true'] {
     border: 3px solid red;
   }
   
-  textarea[required='true'] {
+  textarea[required='false'] {
     border: 3px solid red;
   } 
 
-
-
-
-
-.error{
-    border: 1px solid red;
-}
 .text2 textarea {
 
     display: flex;

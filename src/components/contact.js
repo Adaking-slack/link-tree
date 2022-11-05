@@ -1,13 +1,11 @@
 
 import contactCSS from "./contact.module.css"
-import { useState } from "react"
+import React, { useState } from "react"
 import { useForm } from "react-hook-form";
 
 
 export default function Contact() {
     const [textarea, setTextarea] = useState()
-
-
 
     const { register, handleSubmit, formState: { errors } } = useForm({
         mode: 'onChange'
@@ -39,12 +37,11 @@ export default function Contact() {
                                 {...register("firstName", { required: true, maxLength: 10 })}
                                 className={contactCSS.input}
                                 placeholder="Enter your first name"
-
                             />
-                            <div className="error">
+                            
                                 {errors.firstName && <p className={contactCSS.textError}>Please enter your First Name </p>}
 
-                            </div>
+                         
                         </label>
                         <label>
                             <p>Last Name</p>
@@ -97,8 +94,8 @@ export default function Contact() {
                                 id="message"
                                 placeholder="Send me a message and i will reply you"
                                 {...register("text", { required: true, maxLength: 10 })}
-                               required ={errors.text ? "true" : "false"}
-                                
+                                    
+
                             />
                         </label>
                         {errors.text && <p className={contactCSS.textError}>Please enter a message</p>}
