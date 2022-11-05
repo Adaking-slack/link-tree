@@ -47,7 +47,7 @@ export default function Buttonlink() {
                 Design books
             </a>
 
-            <a href="/contact" id="contact" >
+            <a href="#/contact" id="contact" >
             
                   Contact Me
             </a>
