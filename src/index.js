@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import Contact from './components/contact';
-import {  Routes, Route, HashRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
 import Footer from './components/footer';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   
   
-  <HashRouter>
+  <BrowserRouter>
   <Routes>
   <Route path="/" element={<App />} />
   <Route path="/contact" element={<Contact />} />
@@ -16,7 +16,7 @@ root.render(
  
   </Routes>
 <Footer />
-  </HashRouter>
+  </BrowserRouter>
 
 );
 
